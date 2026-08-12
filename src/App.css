@@ -1,3 +1,16 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.filterBar {
+  min-height: 100px;
+  background-color: bisque;
+  margin-bottom: 2rem;
+}
+
 body .movie-card {
   display: flex;
   gap: 20px;
