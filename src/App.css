@@ -1,0 +1,22 @@
+body .movie-card {
+  display: flex;
+  gap: 20px;
+  border: 2px solid grey;
+  justify-content: space-between;
+  padding: 1.5rem;
+  margin: 15px auto;
+  max-width: 400px;
+  align-items: center;
+}
+
+.movie-card .movie-title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.movie-card .movie-genre {
+  font-weight: 700;
+  background-color: antiquewhite;
+  padding: 0.5rem;
+  border-radius: 12px;
+}
