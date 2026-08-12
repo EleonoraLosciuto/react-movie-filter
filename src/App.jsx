@@ -13,12 +13,20 @@ const initialMovies = [
 function App() {
   const [movies, setMovies] = useState(initialMovies);
   const [filteredMovies, setFilteredMovies] = useState(movies);
+  const [selectedGenre, setSelectedGenre] = useState("");
   const [filter, setFilter] = useState("");
 
-  const handleFilterInput = (e) => (
+  const genreSet = [...new Set(movies.map((movie) => movie.genre))];
+
+  const handleFilterInput = (e) => {
     setFilter(e.target.value),
-    console.log(filter)
-  );
+      console.log(`Film Ricercato: ${e.target.value}`)
+  };
+
+  const handleGenreSelect = (e) => {
+    setSelectedGenre(e.target.value),
+      console.log(`Genere Selezionato: ${e.target.value}`)
+  };
 
   return (
     <>
@@ -26,6 +34,17 @@ function App() {
         <div className="filterBar">
           <label>Cerca film: </label>
           <input type="text" onChange={handleFilterInput} value={filter} />
+
+          <label>Seleziona Genere Film: </label>
+          <select name="selectGenre" value={selectedGenre} onChange={handleGenreSelect}>
+            <option value="none"></option>
+            {
+              genreSet.map((genre, index) =>
+                <option key={index} value={genre}>{genre}</option>
+              )
+
+            }
+          </select>
         </div>
       </header>
 

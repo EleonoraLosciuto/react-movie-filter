@@ -33,3 +33,15 @@ body .movie-card {
   padding: 0.5rem;
   border-radius: 12px;
 }
+
+.filterBar {
+  padding: 1.2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.filterBar label {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
